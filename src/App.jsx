@@ -16,7 +16,10 @@ class App extends Component {
         <nav className="navbar">
           <h3 className="logo">ToDo List</h3>
         </nav>
-        <SearchField />
+        <SearchField placeholder="Procurando Nemo"/>
+		
+		{ this.props.children }
+		
       </div>
     );
   }

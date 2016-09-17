@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+
 import './SearchField.css';
 
 /**
@@ -15,11 +16,18 @@ class SearchField extends Component {
       <form className="search-form">
         <input
           type="search"
-          placeholder="Pesquisar tarefa..." />
+          placeholder={this.props.placeholder} />
       </form>
     );
   }
 }
 
+SearchField.propTypes = {
+	placeholder:PropTypes.string.isRequired
+}
+
 // Exporta o componente
 export default SearchField;
+
+
+
